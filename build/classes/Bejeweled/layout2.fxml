@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="1326.78" minHeight="-Infinity" minWidth="1326.78" prefHeight="850.0" prefWidth="1326.78" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bejeweled.Layout2Controller">
+   <children>
+      <AnchorPane fx:id="scene1" prefHeight="820.0" prefWidth="1326.78" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <ImageView fitHeight="820.0" fitWidth="1326.78" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <image>
+                  <Image url="@../Images/Background.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="330.0" fitWidth="1200.0" layoutX="63.39" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Bejeweled.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="409.0" fitWidth="324.0" layoutX="504.0" layoutY="267.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../Images/minion.png" />
+               </image>
+            </ImageView>
+            <HBox fx:id="hbox" fillHeight="false" layoutX="463.39" layoutY="690.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="btnFacil" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBtnFacil" prefHeight="70.0" prefWidth="190.0" style="-fx-border-color: black;" text="Fácil" textAlignment="CENTER" textFill="#ff5310">
+                     <font>
+                        <Font name="Showcard Gothic" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDificil" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBtnDificil" prefHeight="70.0" prefWidth="190.0" style="-fx-border-color: black;" text="Díficil" textAlignment="CENTER" textFill="#ff5310">
+                     <font>
+                        <Font name="Showcard Gothic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <ImageView fx:id="soundIcon" fitHeight="50.0" fitWidth="50.0" layoutX="1213.0" layoutY="700.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Som.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="noSoundIcon" fitHeight="50.0" fitWidth="50.0" layoutX="1213.0" layoutY="700.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../Images/SemSom.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="soundBtn" layoutX="1212.0" layoutY="700.0" mnemonicParsing="false" onAction="#sound" opacity="0.0" prefHeight="50.0" prefWidth="50.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="scene2" prefHeight="820.0" prefWidth="1326.78" visible="false" AnchorPane.topAnchor="30.0">
+         <children>
+            <ImageView fitHeight="820.0" fitWidth="1326.78" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images/Background.jpg" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="820.0" prefWidth="820.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane fx:id="tableJogo" gridLinesVisible="true" layoutX="10.0" layoutY="10.0" prefHeight="800.0" prefWidth="800.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Pane prefHeight="506.79" prefWidth="506.79" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="500.0" layoutX="4.0" layoutY="166.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Images/Bejeweled2.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lable2" alignment="CENTER" layoutX="104.0" layoutY="302.0" prefHeight="30.0" prefWidth="300.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lable5" alignment="CENTER" layoutX="104.0" layoutY="311.0" prefHeight="30.0" prefWidth="300.0" text="Introduza o seu nome:" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idJogador" layoutX="129.0" layoutY="342.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#salvaFicheiro" prefHeight="30.0" prefWidth="250.0" visible="false" />
+               </children>
+            </Pane>
+            <Pane prefHeight="313.21" prefWidth="313.21" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="258.0" layoutX="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/minion.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="193.57" prefWidth="193.57" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="313.21">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="57.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="193.57" text="Pontos:" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtPontos" alignment="CENTER" contentDisplay="CENTER" layoutY="97.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="193.57" textAlignment="CENTER">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="119.64" prefWidth="119.64" AnchorPane.bottomAnchor="193.57" AnchorPane.leftAnchor="820.0">
+               <children>
+                  <ImageView fx:id="soundIcon2" fitHeight="50.0" fitWidth="50.0" layoutX="36.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Som.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="noSoundIcon2" fitHeight="50.0" fitWidth="50.0" layoutX="36.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../Images/SemSom.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="soundBtn1" layoutX="35.0" layoutY="35.0" mnemonicParsing="false" onAction="#sound" opacity="0.0" prefHeight="50.0" prefWidth="50.0" />
+               </children></Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="scene3" layoutY="30.0" prefHeight="820.0" prefWidth="1326.78" visible="false">
+         <children>
+            <ImageView fitHeight="820.0" fitWidth="1326.78" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images/Background.jpg" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="820.0" prefWidth="820.0">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="800.0" layoutX="10.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Bejeweled.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="210.0" layoutY="348.0" prefWidth="400.0" text="PARABÉNS!">
+                     <font>
+                        <Font name="System Bold" size="50.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label6" alignment="CENTER" layoutX="210.0" layoutY="421.0" prefWidth="400.0">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="260.0" layoutY="661.0" mnemonicParsing="false" onAction="#newGame" prefHeight="60.0" prefWidth="300.0" style="-fx-border-color: black;" text="Página Inicial" textFill="#ff5310">
+                     <font>
+                        <Font name="Showcard Gothic" size="24.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="820.0" prefWidth="507.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <children>
+                  <Label layoutX="203.0" layoutY="175.0" text="TOP 10">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="listView1" editable="true" fixedCellSize="0.0" layoutX="50.0" layoutY="220.0" prefHeight="580.0" prefWidth="407.0" style="-fx-font: 24pt &quot;Arial&quot;;" />
+                  <Label alignment="CENTER" layoutX="4.0" layoutY="117.0" prefHeight="40.0" prefWidth="500.0" text="HIGH SCORES">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="scene4" layoutY="30.0" prefHeight="820.0" prefWidth="1326.78" visible="false">
+         <children>
+            <ImageView fitHeight="820.0" fitWidth="1326.78" pickOnBounds="true">
+               <image>
+                  <Image url="@../Images/Background.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="300.0" fitWidth="800.0" layoutX="264.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Bejeweled.png" />
+               </image>
+            </ImageView>
+            <VBox fx:id="vBoxCreditos" alignment="TOP_CENTER" layoutX="463.0" layoutY="275.0" prefHeight="500.0" prefWidth="400.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Créditos">
+                     <font>
+                        <Font name="System Bold" size="70.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="70.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="400.0" text="João Letra">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="400.0" text="Bruno Pereira">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="400.0" text="Raquel Baptista">
+                     <font>
+                        <Font name="System Bold" size="35.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#newGame" prefHeight="60.0" prefWidth="300.0" style="-fx-border-color: black;" text="Página Inicial" textFill="#ff5310">
+                     <font>
+                        <Font name="Showcard Gothic" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <MenuBar prefHeight="30.0" prefWidth="1326.78">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#newGame" text="Novo Jogo" />
+                  <MenuItem mnemonicParsing="false" onAction="#highScores" text="Pontuação" />
+                  <MenuItem mnemonicParsing="false" onAction="#onExit" text="Sair" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMove" text="Finalizar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="About">
+               <items>
+                <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
